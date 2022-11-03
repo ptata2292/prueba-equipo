@@ -1,0 +1,37 @@
+<section>
+
+    <div class="d-flex justify-content-between">
+      <h4>Resumen de Equipos</h4>
+      <a routerLink="/equipo/index" class="btn btn-primary">Volver al Listado de Equipos</a>
+    </div>
+
+    <br>
+    
+    <table class="table ">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>IP</th>
+        <th>Marca</th>
+        <th>Conetado</th>
+        <th>No Conectado</th>
+        <th>Intentos</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let equipo of equipos">
+        <td>{{ equipo.id }}</td>
+        <td>{{ equipo.name }}</td>
+        <td>{{ equipo.ip }}</td>
+        <td>{{ equipo.marca }}</td>
+        <td>{{ equipo.conecta }}</td>
+        <td>{{ equipo.noconecta }}</td>
+        <td>{{ equipo.conecta + equipo.noconecta}}</td>
+        <td>
+          <button type="button" (click)="ping(equipo.id, equipo)" class="btn btn-warning">Ping</button>
+        </td>
+      </tr>
+    </table>
+
+    <div class="loader" *ngIf="awaiting">Loading...</div>
+
+ </section>

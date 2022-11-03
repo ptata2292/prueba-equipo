@@ -1,10 +1,4 @@
-ANGULAR paso para ejecutar en local
-1- tener angular 10+
-2- ejecutar npm install
-3- ejecutar ng serve
-4- correo equipo@gmail.com clave 123456
-
-LARAVEL paso para ejecutar en local
+paso para ejecutar en local
 1- tener laravel 8+ y php 7.4+
 2- base de datos postgres
 3- nombre de la base de datos 'equipo'
